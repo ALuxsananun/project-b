@@ -42,238 +42,159 @@ public class InitApp implements ApplicationListener<ApplicationReadyEvent> {
         Comment c1, c2, c3;
         advisor1 = advisorRepository.save(Advisor
                 .builder()
-                .name("Somsak")
-                .surname("Smith")
-                .department("English")
-                .position("Lecturer")
-                .advisorID("A001")
-                .image(List.of("https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=600"))
-                .build());
-        advisor2 = advisorRepository.save(Advisor.builder()
-                .name("Ahmed")
-                .surname("Khan")
-                .department("Business Administration")
-                .position("Researcher")
-                .advisorID("A002")
-                .image(List.of("https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=600"))
+                .name("Toshinori")
+                .surname("Yagi")
+                .department("Foundational Hero Studies")
+                .position("Professor")
+                .advisorID("A01")
+                .image(List.of("https://i.pinimg.com/564x/8e/77/56/8e7756e78dca420e5bff8d0ea34ed645.jpg"))
                 .announcements(List.of("https://miro.medium.com/v2/resize:fit:900/1*v4RzJC1ufpxcQWOOhBitPA.jpeg","https://storage.googleapis.com/download/storage/v1/b/projectstorage-165a3.appspot.com/o/2023-10-29%20233234164-953321_721.pdf?generation=1698597162648926&alt=media"))
                 .build());
+        advisor2 = advisorRepository.save(Advisor.builder()
+                .name("Shoto")
+                .surname("Aizawa")
+                .department("Battle")
+                .position("Associate Professor")
+                .advisorID("A02")
+                .image(List.of("https://i.pinimg.com/564x/72/eb/cf/72ebcfec46cf8bc1f1ae906ad9413412.jpg"))
+                .build());
         advisor3 = advisorRepository.save(Advisor.builder()
-                .name("Astor   ")
-                .surname("Hawk")
-                .department("Mathematics")
-                .position("Professor")
-                .advisorID("A003")
-                .image(List.of("https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=600"))
+                .name("Keigo")
+                .surname("Takami")
+                .department("Science")
+                .position("Lecturer")
+                .advisorID("A03")
+                .image(List.of("https://i.pinimg.com/564x/5a/5c/f3/5a5cf366a2e2e2c939be40b2b5c775b6.jpg"))
                 .build());
 
         advisor4 = advisorRepository.save(Advisor.builder()
-                .name("Alice")
-                .surname("Johnson")
-                .department("History")
-                .position("Associate Professor")
-                .advisorID("A004")
-                .image(List.of("https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=600"))
+                .name("Sorahiko")
+                .surname("Torino")
+                .department("Mathematics")
+                .position("Professor")
+                .advisorID("A04")
+                .image(List.of("https://i.pinimg.com/originals/12/46/aa/1246aa6a3e6f4c5a12f43257ecd227e2.jpg"))
                 .build());
 
         advisor5 = advisorRepository.save(Advisor.builder()
-                .name("Kathy")
-                .surname("Merton")
-                .department("Physics")
-                .position("Assistant Professor")
-                .advisorID("A005")
-                .image(List.of("https://images.pexels.com/photos/18666051/pexels-photo-18666051.jpeg?auto=compress&cs=tinysrgb&w=600"))
+                .name("Anan")
+                .surname("Kurose")
+                .department("History")
+                .position("Lecturer")
+                .advisorID("A05")
+                .image(List.of("https://i.pinimg.com/originals/b0/fe/28/b0fe28767e7a68d22eeaa38b9e287b20.jpg"))
                 .build());
         advisor6 = advisorRepository.save(Advisor.builder()
-                .name("David")
-                .surname("Lee")
-                .department("Computer Science")
-                .position("Professor")
-                .advisorID("A006")
-                .image(List.of("https://images.pexels.com/photos/1752126/pexels-photo-1752126.jpeg?auto=compress&cs=tinysrgb&w=600"))
+                .name("Hizashi")
+                .surname("Yamada")
+                .department("English")
+                .position("Lecturer")
+                .advisorID("A06")
+                .image(List.of("https://i.pinimg.com/originals/4e/8f/22/4e8f22d17f6dfd0eac6dbdf822eb4d9c.jpg"))
                 .build());
 
-        Student student,student1,student2,student3;
-        student3 = studentRepository.save(Student.builder()
-                .studentID("S001")
-                .name("Daisy")
-                .surname("Walsh")
-                .department("Computer Science")
-                .image(List.of("https://images.pexels.com/photos/18678398/pexels-photo-18678398.jpeg?auto=compress&cs=tinysrgb&w=600"))
-                .build());
-        student3.setAdvisor(advisor2);
-        advisor2.getStudentList().add(student3);
-
-
+        Student student1,student2,student3,student4,student5,student6,student7,student8,student9,student10;
         student1 = studentRepository.save(Student.builder()
-                .studentID("S002")
-                .name("Jerry")
-                .surname("Perry")
-                .department("Mathematics")
-                .image(List.of("https://images.pexels.com/photos/997472/pexels-photo-997472.jpeg?auto=compress&cs=tinysrgb&w=600"))
+                .studentID("S01")
+                .name("Yuga")
+                .surname("Aoyama")
+                .department("History, Science")
+                .image(List.of("https://shorturl.asia/Enujr"))
                 .build());
-        student1.setAdvisor(advisor2);
-        advisor2.getStudentList().add(student1);
+        student1.setAdvisor(advisor3);
+        advisor3.getStudentList().add(student1);
+
 
         student2 = studentRepository.save(Student.builder()
-                .studentID("S003")
-                .name("May")
-                .surname("Gates")
-                .department("Physics")
-                .image(List.of("https://images.pexels.com/photos/18618357/pexels-photo-18618357.jpeg?auto=compress&cs=tinysrgb&w=600"))
+                .studentID("S02")
+                .name("Mina")
+                .surname("Ashido")
+                .department("Science")
+                .image(List.of("https://shorturl.asia/f61bX"))
                 .build());
         student2.setAdvisor(advisor5);
         advisor5.getStudentList().add(student2);
 
-        student = studentRepository.save(Student.builder()
-                .studentID("S004")
-                .name("Bob")
-                .surname("Brown")
-                .department("Chemistry")
-                .image(List.of("https://images.pexels.com/photos/18619767/pexels-photo-18619767.jpeg?auto=compress&cs=tinysrgb&w=600"))
+        student3 = studentRepository.save(Student.builder()
+                .studentID("S03")
+                .name("Tsuyu")
+                .surname("Asui")
+                .department("History, Mathematics")
+                .image(List.of("https://shorturl.asia/ZBTEJ"))
                 .build());
-        student.setAdvisor(advisor2);
-        advisor2.getStudentList().add(student);
+        student3.setAdvisor(advisor5);
+        advisor5.getStudentList().add(student3);
 
-        student = studentRepository.save(Student.builder()
-                .studentID("S005")
-                .name("Grace")
-                .surname("Adams")
-                .department("English")
-                .image(List.of("https://images.pexels.com/photos/18665105/pexels-photo-18665105.jpeg?auto=compress&cs=tinysrgb&w=600"))
+        student4 = studentRepository.save(Student.builder()
+                .studentID("S04")
+                .name("Tenya")
+                .surname("Ida")
+                .department("Foundational Hero Studies")
+                .image(List.of("https://shorturl.asia/TxJpl"))
                 .build());
-        student.setAdvisor(advisor3);
-        advisor3.getStudentList().add(student);
+        student4.setAdvisor(advisor4);
+        advisor4.getStudentList().add(student4);
 
-        student = studentRepository.save(Student.builder()
-                .studentID("S006")
-                .name("Henry")
-                .surname("Wilson")
-                .department("Engineering")
-                .image(List.of("https://images.pexels.com/photos/18665111/pexels-photo-18665111.jpeg?auto=compress&cs=tinysrgb&w=600"))
-                .build());
-        student.setAdvisor(advisor3);
-        advisor3.getStudentList().add(student);
-
-        student = studentRepository.save(Student.builder()
-                .studentID("S007")
-                .name("Isabella")
-                .surname("Harris")
-                .department("Geology")
-                .image(List.of("https://images.pexels.com/photos/18580991/pexels-photo-18580991.jpeg?auto=compress&cs=tinysrgb&w=600"))
-                .build());
-        student.setAdvisor(advisor4);
-        advisor4.getStudentList().add(student);
-
-        student = studentRepository.save(Student.builder()
-                .studentID("S008")
-                .name("Jane")
-                .surname("Lee")
-                .department("Psychology")
-                .image(List.of("https://images.pexels.com/photos/18641980/pexels-photo-18641980.jpeg?auto=compress&cs=tinysrgb&w=600"))
-                .build());
-        student.setAdvisor(advisor4);
-        advisor4.getStudentList().add(student);
-
-        student = studentRepository.save(Student.builder()
-                .studentID("S009")
-                .name("Jackson")
-                .surname("Parker")
-                .department("Computer Science")
-                .image(List.of("https://images.pexels.com/photos/18593901/pexels-photo-18593901.jpeg?auto=compress&cs=tinysrgb&w=600"))
-                .build());
-        student.setAdvisor(advisor5);
-        advisor5.getStudentList().add(student);
-
-        student = studentRepository.save(Student.builder()
-                .studentID("S010")
-                .name("Sandra")
-                .surname("Bullock")
-                .department("Biology")
-                .image(List.of("https://images.pexels.com/photos/18673327/pexels-photo-18673327.jpeg?auto=compress&cs=tinysrgb&w=600"))
-                .build());
-        student.setAdvisor(advisor5);
-        advisor5.getStudentList().add(student);
-
-        student = studentRepository.save(Student.builder()
-                .studentID("S011")
-                .name("Scooby")
-                .surname("Doo")
-                .department("Mathematics")
-                .image(List.of("https://images.pexels.com/photos/18665098/pexels-photo-18665098.jpeg?auto=compress&cs=tinysrgb&w=600"))
-                .build());
-        student.setAdvisor(advisor6);
-        advisor6.getStudentList().add(student);
-
-        student = studentRepository.save(Student.builder()
-                .studentID("S012")
-                .name("Jennifer")
-                .surname("Kim")
+        student5 = studentRepository.save(Student.builder()
+                .studentID("S05")
+                .name("Ochaco")
+                .surname("Uraraka")
                 .department("History")
-                .image(List.of("https://images.pexels.com/photos/18633036/pexels-photo-18633036.png?auto=compress&cs=tinysrgb&w=600"))
+                .image(List.of("https://shorturl.asia/osAWh"))
                 .build());
-        student.setAdvisor(advisor6);
-        advisor6.getStudentList().add(student);
+        student5.setAdvisor(advisor6);
+        advisor6.getStudentList().add(student5);
 
-        student = studentRepository.save(Student.builder()
-                .studentID("S013")
-                .name("Mika")
-                .surname("Donald")
-                .department("Social")
-                .image(List.of("https://images.pexels.com/photos/1486064/pexels-photo-1486064.jpeg?auto=compress&cs=tinysrgb&w=600"))
+        student6 = studentRepository.save(Student.builder()
+                .studentID("S06")
+                .name("Shoto")
+                .surname("Todoroki")
+                .department("Science, Battle")
+                .image(List.of("https://shorturl.asia/X2iWE"))
                 .build());
-        student.setAdvisor(advisor2);
-        advisor2.getStudentList().add(student);
+        student6.setAdvisor(advisor6);
+        advisor6.getStudentList().add(student6);
 
-        student = studentRepository.save(Student.builder()
-                .studentID("S014")
-                .name("Silver")
-                .surname("Morgan")
-                .department("Geology")
-                .image(List.of("https://images.pexels.com/photos/1405963/pexels-photo-1405963.jpeg?auto=compress&cs=tinysrgb&w=600"))
+        student7 = studentRepository.save(Student.builder()
+                .studentID("S07")
+                .name("Katsuki")
+                .surname("Bakugo")
+                .department("Battle, Mathematics")
+                .image(List.of("https://shorturl.asia/f8MWV"))
                 .build());
-        student.setAdvisor(advisor2);
-        advisor2.getStudentList().add(student);
+        student7.setAdvisor(advisor1);
+        advisor1.getStudentList().add(student7);
 
-        student = studentRepository.save(Student.builder()
-                .studentID("S015")
-                .name("Casper")
-                .surname("Miller")
-                .department("Music")
-                .image(List.of("https://images.pexels.com/photos/1656684/pexels-photo-1656684.jpeg?auto=compress&cs=tinysrgb&w=600"))
+        student8 = studentRepository.save(Student.builder()
+                .studentID("S08")
+                .name("Izuku")
+                .surname("Midoriya")
+                .department("Foundational Hero Studies, Battle")
+                .image(List.of("https://shorturl.asia/s24Lq"))
                 .build());
-        student.setAdvisor(advisor3);
-        advisor3.getStudentList().add(student);
+        student8.setAdvisor(advisor1);
+        advisor1.getStudentList().add(student8);
 
-        student = studentRepository.save(Student.builder()
-                .studentID("S016")
-                .name("Sparkle")
-                .surname("Evans")
-                .department("Biology")
-                .image(List.of("https://images.pexels.com/photos/1036645/pexels-photo-1036645.jpeg?auto=compress&cs=tinysrgb&w=600"))
+        student9 = studentRepository.save(Student.builder()
+                .studentID("S09")
+                .name("Denki")
+                .surname("Kaminari")
+                .department("Science")
+                .image(List.of("https://shorturl.asia/K1XNM"))
                 .build());
-        student.setAdvisor(advisor4);
-        advisor4.getStudentList().add(student);
+        student9.setAdvisor(advisor5);
+        advisor5.getStudentList().add(student9);
 
-        student = studentRepository.save(Student.builder()
-                .studentID("S017")
-                .name("Rose")
-                .surname("Lopez")
-                .department("Chemistry")
-                .image(List.of("https://images.pexels.com/photos/18667692/pexels-photo-18667692.jpeg?auto=compress&cs=tinysrgb&w=600"))
+        student10 = studentRepository.save(Student.builder()
+                .studentID("S10")
+                .name("Eijiro")
+                .surname("Kirishima")
+                .department("English")
+                .image(List.of("https://shorturl.asia/5dFLt"))
                 .build());
-        student.setAdvisor(advisor5);
-        advisor5.getStudentList().add(student);
+        student10.setAdvisor(advisor2);
+        advisor2.getStudentList().add(student10);
 
-        student = studentRepository.save(Student.builder()
-                .studentID("S018")
-                .name("Buzz")
-                .surname("Ligthyear")
-                .department("Psychology")
-                .image(List.of("https://images.pexels.com/photos/18649280/pexels-photo-18649280.jpeg?auto=compress&cs=tinysrgb&w=600"))
-                .build());
-        student.setAdvisor(advisor3);
-        advisor3.getStudentList().add(student);
         addUser();
         //admin
         advisor1.setUser(user1);
@@ -282,8 +203,8 @@ public class InitApp implements ApplicationListener<ApplicationReadyEvent> {
         advisor2.setUser(user2);
         user2.setAdvisor(advisor2);
         //student
-        student.setUser(user3);
-        user3.setStudent(student);
+        student8.setUser(user3);
+        user3.setStudent(student8);
         //advisor
         user5.setAdvisor(advisor3);
         advisor3.setUser(user5);
